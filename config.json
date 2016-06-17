@@ -1,0 +1,9 @@
+[
+  {
+    "nickname": "hot_slack_bot",
+    "server": "irc.oftc.net",
+    "channelMapping": {
+      "#hot_irc_channel": "#hot"
+    }
+  }
+]
