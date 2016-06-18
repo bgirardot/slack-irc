@@ -26,7 +26,8 @@
     "mocha": "mocha --compilers js:babel-core/register $(find test -name '*.test.js')",
     "mocha:watch": "npm run mocha -- --watch --reporter min",
     "coverage": "nyc --require babel-core/register _mocha -- $(find test -name '*.test.js') && nyc report --reporter=cobertura",
-    "test": "npm run lint && npm run coverage"
+    "test": "npm run lint && npm run coverage",
+    "postinstall": "babel lib --out-dir dist"
   },
   "author": {
     "name": "Martin Ek <mail@ekmartin.no>"
@@ -39,9 +40,7 @@
     "lodash": "4.13.1",
     "@slack/client": "3.2.0",
     "strip-json-comments": "2.0.1",
-    "winston": "2.2.0"
-  },
-  "devDependencies": {
+    "winston": "2.2.0",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
     "babel-eslint": "^6.0.4",
